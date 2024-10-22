@@ -1,5 +1,6 @@
 import pygame
 from constants import SCREEN_HEIGHT, SCREEN_WIDTH
+from player import Player
 
 
 def main():
@@ -11,6 +12,9 @@ def main():
     # restrict fps to 60 by counting delta time since last frame drawn
     clock = pygame.time.Clock()
     dt = 0
+    x = SCREEN_WIDTH / 2
+    y = SCREEN_HEIGHT / 2
+    player_0 = Player(x, y)
 
     # simple game loop using an infinite loop
     while True:
@@ -22,10 +26,18 @@ def main():
         # pygame.Surface.fill(screen, (0, 0, 0))
 
         # white screen
-        pygame.Surface.fill(screen, (255, 255, 255))
+        # pygame.Surface.fill(screen, (255, 255, 255))
 
+        # better way to display black/white screen
+        screen.fill("black")
+
+        # redraws player
+        player_0.draw(screen)
+
+        # refreshes screen
         pygame.display.flip()
 
+        # limit frame rate to 60 fps
         tick = clock.tick(60)
         dt = tick / 1000
 
