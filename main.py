@@ -22,6 +22,9 @@ def main():
             if event.type == pygame.QUIT:
                 return
 
+        # update player position before redraw to prevent lag
+        player_0.update(dt)
+
         # black screen
         # pygame.Surface.fill(screen, (0, 0, 0))
 
