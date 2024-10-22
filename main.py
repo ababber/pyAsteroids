@@ -9,6 +9,14 @@ def main():
     # use pygame to set gui window
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
+    # https://www.pygame.org/docs/ref/sprite.html#pygame.sprite.Group
+    # intended to hold and manage multiple game objects
+    updatable = pygame.sprite.Group()
+    drawable = pygame.sprite.Group()
+
+    # groups added to static field containers, do this before a class instance init
+    Player.containers = (updatable, drawable)
+
     # restrict fps to 60 by counting delta time since last frame drawn
     clock = pygame.time.Clock()
     dt = 0
@@ -23,7 +31,11 @@ def main():
                 return
 
         # update player position before redraw to prevent lag
-        player_0.update(dt)
+        # player_0.update(dt)
+
+        # update all updatable items with iter pygame Group()
+        for obj in updatable:
+            obj.update(dt)
 
         # black screen
         # pygame.Surface.fill(screen, (0, 0, 0))
@@ -35,7 +47,11 @@ def main():
         screen.fill("black")
 
         # redraws player
-        player_0.draw(screen)
+        # player_0.draw(screen)
+
+        # draw all drawable items with iter pygame Group()
+        for obj in drawable:
+            obj.draw(screen)
 
         # refreshes screen
         pygame.display.flip()

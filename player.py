@@ -28,7 +28,7 @@ class Player(CircleShape):
 
     def move(self, dt):
         # https://en.wikipedia.org/wiki/Unit_vector
-        # create a vector from (0,0) to (0,1), rotate vector by players 
+        # create a vector from (0,0) to (0,1), rotate vector by players
         # rotation to point in the direction the player is facing
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
         # the vector is added to current position to move player
