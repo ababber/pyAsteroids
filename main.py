@@ -1,6 +1,8 @@
 import pygame
 from constants import SCREEN_HEIGHT, SCREEN_WIDTH
 from player import Player
+from asteroid import Asteroid
+from asteroidfield import AsteroidField
 
 
 def main():
@@ -13,9 +15,12 @@ def main():
     # intended to hold and manage multiple game objects
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
+    asteroids = pygame.sprite.Group()
 
     # groups added to static field containers, do this before a class instance init
     Player.containers = (updatable, drawable)
+    Asteroid.containers = (updatable, drawable, asteroids)
+    AsteroidField.containers = updatable
 
     # restrict fps to 60 by counting delta time since last frame drawn
     clock = pygame.time.Clock()
@@ -23,6 +28,7 @@ def main():
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
     player_0 = Player(x, y)
+    asteroid_field = AsteroidField()
 
     # simple game loop using an infinite loop
     while True:
