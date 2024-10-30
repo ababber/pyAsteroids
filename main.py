@@ -1,3 +1,4 @@
+import sys
 import pygame
 from constants import SCREEN_HEIGHT, SCREEN_WIDTH
 from player import Player
@@ -42,6 +43,10 @@ def main():
         # update all updatable items with iter pygame Group()
         for obj in updatable:
             obj.update(dt)
+
+        for obj in asteroids:
+            if obj.hasCollided(player_0):
+                return sys.exit("Game Over!")
 
         # black screen
         # pygame.Surface.fill(screen, (0, 0, 0))
