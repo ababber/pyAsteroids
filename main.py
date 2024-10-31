@@ -47,9 +47,14 @@ def main():
         for obj in updatable:
             obj.update(dt)
 
-        for obj in asteroids:
-            if obj.hasCollided(player_0):
+        for asteroid in asteroids:
+            if asteroid.hasCollided(player_0):
                 return sys.exit("Game Over!")
+
+            for shot in shots:
+                if asteroid.hasCollided(shot):
+                    asteroid.kill()
+                    shot.kill()
 
         # black screen
         # pygame.Surface.fill(screen, (0, 0, 0))
