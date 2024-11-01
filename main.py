@@ -32,7 +32,7 @@ def main():
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
     player_0 = Player(x, y)
-    asteroid_field = AsteroidField()
+    AsteroidField()
 
     # simple game loop using an infinite loop
     while True:
@@ -53,7 +53,7 @@ def main():
 
             for shot in shots:
                 if asteroid.hasCollided(shot):
-                    asteroid.kill()
+                    asteroid.split()
                     shot.kill()
 
         # black screen
