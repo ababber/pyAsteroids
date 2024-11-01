@@ -1,5 +1,7 @@
 # pyAsteroids
 
+![](https://github.com/ababber/pyAsteroids/blob/main/pyAsteroids.gif)
+
 ## depends on `macOS`/`linux`, `python >= 3.7`, `pygame`, `bash`/`zsh`
 
 * `pip install -r requirements.txt` for python requirements before running
