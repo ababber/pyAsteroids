@@ -1,16 +1,34 @@
 # pyAsteroids
 
-## env
+## depends on `macOS`/`linux`, `python >= 3.7`, `pygame`, `bash`/`zsh`
 
-* depends on `pygame`
-*
+* `pip install -r requirements.txt` for python requirements before running
+
+## running
+
+* `python main.py`
+
+## game play controls
+
+* `w`: move forward
+* `s`: move backward
+* `d`: rotate clockwise
+* `a`: rotate counter clockwise
+* `space`: shoot bullet
 
 ## description
 
 * A `boot.dev` guided project
-* differences from `boot.dev` project and current implementation
-  * currently using `pyenv` and `pyenv-virtualenv` instead of `venv`
-*
+  * everything after commit id `9c6f183c2817b3a0e835843487c3cc32580e0380` are features added beyond scope of project.
+* features added beyond scope of project:
+  * currently using `pyenv` and `pyenv-virtualenv` instead of `venv` for development
+
+## to do
+
+* [ ] add intro and outro title screen
+* [ ] add asteroid to asteroid collision feature, currently asteroids overlap instead of collide
+* [ ] add levels, next level acheived by destroying `x` asteroids per level and advancing displays next level title screen
+* [ ] add AI boss level
 
 ## refs
 
