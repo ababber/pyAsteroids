@@ -38,5 +38,3 @@
 * [pygame docs](https://www.pygame.org/docs/ref/pygame.html)
 * [unit vector](https://en.wikipedia.org/wiki/Unit_vector)
 * [collision detection](https://en.wikipedia.org/wiki/Collision_detection)
-
-<video src="https://github.com/ababber/pyAsteroids/blob/main/pyAsteroids.mp4" />
