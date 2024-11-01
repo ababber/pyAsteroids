@@ -1,4 +1,4 @@
-# [![pyAsteroids](./pyAsteroids.mov)]
+# [pyAsteroids](https://github.com/ababber/pyAsteroids/blob/main/pyAsteroids.mov)
 
 ## depends on `macOS`/`linux`, `python >= 3.7`, `pygame`, `bash`/`zsh`
 
