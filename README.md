@@ -1,4 +1,4 @@
-# pyAsteroids
+# [pyAsteroids](./pyAsteroids.mov)
 
 ## depends on `macOS`/`linux`, `python >= 3.7`, `pygame`, `bash`/`zsh`
 
@@ -26,7 +26,7 @@
 ## to do
 
 * [ ] fix: edge case of player moving off screen
-* [ ] fix: crashes after a few minutes of gameply
+* [ ] fix: crashes after a few minutes of gameplay
 * [ ] add intro and outro title screen
 * [ ] add asteroid to asteroid collision feature, currently asteroids overlap instead of collide
 * [ ] add levels, next level acheived by destroying `x` asteroids per level and advancing displays next level title screen
