@@ -1,6 +1,6 @@
-# pyAsteroids
+<video src="https://github.com/ababber/pyAsteroids/blob/main/pyAsteroids.mov" />
 
-<video src="https://github.com/ababber/pyAsteroids/blob/main/pyAsteroids.mov" width="540" />
+# pyAsteroids
 
 ## depends on `macOS`/`linux`, `python >= 3.7`, `pygame`, `bash`/`zsh`
 
