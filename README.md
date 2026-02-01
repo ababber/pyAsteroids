@@ -25,7 +25,7 @@
 * features added beyond scope of project:
   * currently using `pyenv` and `pyenv-virtualenv` instead of `venv` for development
 
-## to do
+## live coding tasks w/ optimized game development template
 
 * [ ] fix: edge case of player moving off screen
 * [ ] fix: crashes after a few minutes of gameplay
